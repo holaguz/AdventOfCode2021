@@ -8,3 +8,10 @@ This repository contains (hopefully all by christmas) the solutions for the ongo
 I usually modify the puzzle input cuz parsing it in the code sucks ass. i.e. if I need to consume 5 inputs, I prepend the number 5 to those inputs so I know the size of the input beforehand and can create the data structures to hold the data (so ```a,1,b,2,c``` becomes ```5 a 1 b 2 c```).
 
 There's also a lot of hardcoded constants in the code so keep that in mind.
+
+## Compiling and running the solutions
+### On Windows:
+```g++ -std=c++17 dayN.cpp -o dayN && dayN.exe < inputN.txt```
+
+### On Unix:
+```g++ -std=c++17 dayN.cpp -o dayN && ./dayN < inputN.txt```
