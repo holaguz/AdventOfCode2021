@@ -14,7 +14,7 @@ char buffer[256];
 
 template<typename ...Args>
 void Debug(Args ...args){
-    #ifdef NDEBUG
+    #ifdef DEBUG
     fprintf(args...);
     #endif
 }
