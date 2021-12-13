@@ -1,0 +1,30 @@
+We know {1, 4, 7, 8}
+
+Segment 'a' can be found by doing 7 - 1
+
+Segments 'b' and 'd' can be narrowed down by doing 4 - 1                                                  (1)
+Segments 'a' and 'b' and 'f' and 'g' can be narrowed down by intersecting all the samples of length 6     (2)
+
+Segment 'b' can be found by intersecting (1) and (2) 
+Segment 'd' can be found by substracting (1) and 'b' 
+
+Segments 'a', 'd' and 'g' can be narrowed down by intersecting all the samples of length 5                (3)
+
+Segment 'g' can be found by substracting (3) with 'a' and 'd'
+
+Segment 'f' can be found by substracting (2) with 'a' and 'b' and 'g'
+
+Segment 'c' can be found by substracting 1 with 'f'
+
+Segment 'e' is the last unknown segment. Can be found by substracting 8 with all the other segments.
+
+        {1, [      c,       f   ]} 2
+        {7, [a,    c,       f   ]} 3
+        {4, [   b, c, d,    f   ]} 4
+        {2, [a,    c, d, e,    g]} 5
+        {5, [a, b,    d,    f, g]} 5
+        {3, [a,    c, d,    f, g]} 5
+        {6, [a, b,    d, e, f, g]} 6
+        {0, [a, b, c,    e, f, g]} 6
+        {9, [a, b, c, d,    f, g]} 6
+        {8, [a, b, c, d, e, f, g]} 7
